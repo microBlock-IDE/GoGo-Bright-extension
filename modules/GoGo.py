@@ -96,7 +96,6 @@ def talkToServo(servo_port):
         servoBits = _bitSet(servoBits, 2)
     if '4' in servo_port:
         servoBits = _bitSet(servoBits, 3)
-    print("bit: {}".format(hex(servoBits)))
     _writeCmd(CMD_SERVO_ACTIVE, [ servoBits ])
 
 def setServoAngle(head_angle):
